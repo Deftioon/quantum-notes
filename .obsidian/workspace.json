@@ -162,7 +162,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -180,8 +180,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2942a7406ab32cb6",
+  "active": "32a25b914a1a5c40",
   "lastOpenFiles": [
+    "README.mdjrfiNz.bck",
+    "README.md",
     "I Fundamental Concepts/Introduction to Quantum Mechanics/Linear Algebra.md",
     "Categories for Quantum Theory/Basics.md",
     "I Fundamental Concepts/Introduction to Quantum Mechanics/Superdense Coding.md",

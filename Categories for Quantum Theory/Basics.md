@@ -379,4 +379,25 @@ There is a notion of bounded linear maps between Hilbert spaces that make use of
 
 Every linear map between finite dimensional Hilbert spaces is bounded. Hilbert spaces and bounded linear maps form the category $\textbf{Hilb}$. This category will be the main example throughout these notes to model phenomena and quantum theory.
 
+>[!definition] $\textbf{Hilb}$ and $\textbf{FHilb}$
+>In the category $\textbf{Hilb}$ of Hilbert spaces and bounded linear maps:
+>- **Objects** are the Hilbert spaces.
+>- **Morphisms** are bounded linear maps.
+>- **Composition** is composition of linear maps as ordinary functions.
+>- **Identity Morphisms** are given by the identity linear maps.
+>
+>We write $\textbf{FHilb}$ for the restriction of $\textbf{Hilb}$ to finite dimensional Hilbert spaces.
+>^hilb-definition
+
+Since every linear map between Hilbert spaces is bounded, $\textbf{FHilb}$ is an equivalent category to $\textbf{FVect}$. In particular, inner products play no essential role. We will see later how to model inner products categorically, with the idea of *daggers*. 
+
+Hilbert spaces have a more discerning notion of [[Linear Algebra#^basis-definition|basis]].
+
+>[!definition]
+>For a Hilbert space $H$, an *orthogonal basis* is a family of elements $\{e_i\}$ with the following properties:
+>- They are *pairwise orthogonal*, as in $\langle e_i \vert e_j \rangle = \delta_{ij}$
+>- Every element $a \in H$ can be written as an infinite linear combination of $e_i$; that is, there are coefficients $a_i \in \mathbb{C}$ for which $||a - \sum^n_{i=1}a_ie_i||$ tends to zero as $n$ goes to infinity.
+>- It is *orthonormal* when additionally $\langle e_i \vert e_i \rangle = 1$.
+>^hilb-basis-definition
+
 
