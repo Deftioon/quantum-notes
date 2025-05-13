@@ -400,4 +400,53 @@ Hilbert spaces have a more discerning notion of [[Linear Algebra#^basis-definiti
 >- It is *orthonormal* when additionally $\langle e_i \vert e_i \rangle = 1$.
 >^hilb-basis-definition
 
+Any orthogonal family of elements is linearly independent. For finite dimension Hilbert spaces, the notion of basis is still useful. Hence, once we fix ordered bases on finite dimensional Hilbert spaces, linear maps correspond to matrices, just as with vector spaces. For infinite dimension Hilbert spaces however, having a basis for the underlying vector space is rarely useful. 
+
+If two vector spaces carry inner products, then we can give an inner product to the direct sum, leading to the direct sum of Hilbert spaces:
+
+>[!definition] Direct Sum of Hilbert Spaces
+>The *direct sum* of Hilbert spaces $H$ and $K$ is the vector space $H \oplus K$, made into a Hilbert space by the inner product $\langle (a_1, b_1) \vert (a_2, b_2) \rangle = \langle a_1 \vert a_2 \rangle + \langle b_1 \vert b_2 \rangle$.
+>
+>Direct sums provide both [[Basics#^product-coproduct-definition|products]] and [[Basics#^product-coproduct-definition|coproducts]] for the category [[Basics#^hilb-definition|$\textbf{Hilb}$]]. Hilbert spaces have the good property that any closed subspace can be complemented. That is, if the inclusion $U \hookrightarrow V$ is a morphism of $\textbf{Hilb}$ satisfying $||u||_U = ||u||_H$, then there exists another inclusion morphism $U^\perp \hookrightarrow V$ of $\textbf{Hilb}$ with $V = U \oplus U^\perp$. Explicitly, $U^\perp$ is the *orthogonal subspace* $\{a \in V \mid \forall b \in U: \langle a \vert b \rangle = 0\}$.
+>^hilb-direct-sum-definition
+>
+
+### Adjoint Linear Maps
+
+We take the idea of [[Linear Algebra#Adjoint and Hermitian Operators|adjoint linear maps]] further here by defining some extra terms.
+
+>[!definition]
+>A bounded linear map $H \xrightarrow{f} K$ between Hilbert spaces is an *isometry* when $f^\dagger \circ f = \text{id}_H$ and a *partial isometry* when $f^\dagger \circ f$ is a [[Linear Algebra#^2a48c0|projector]].
+
+Recall the idea of *kets* and *bras* in Dirac Notation. The correspondence between these two, that $\ket{v} = \bra{v}^\dagger$, leads to the notion of a dual space.
+
+>[!definition] Dual Space
+>For a Hilbert space $H$, its *dual Hilbert Space* $H^*$ is the vector space $\textbf{Hilb}(H, \mathbb{C})$ consisting of all bounded linear maps from $H$ to $\mathbb{C}$.
+>
+>A Hilbert space is isomorphic to its dual in an anti-linear way: The map $H \to H^*$ given by $\ket{a} \mapsto \varphi_a = \bra{a}$ is an invertible anti-linear function. The inner product on $H^*$ is given by $\langle \varphi_a \vert \varphi_b \rangle_{H^*} = \langle a \vert b \rangle_H$, and makes the function $\ket{a} \mapsto \bra{a}$ bounded. 
+
+### Tensor Product
+
+We also give more rigorous definitions for the [[Linear Algebra#Tensor Products|tensor product]]. As previously mentioned, a tensor product is a way to make a new vector space out of two given ones. 
+
+>[!definition] Bilinear Functions
+>If $U$, $V$, and $W$ are vector spaces, a function $f: U \times V \to W$ is called *bilinear* when it is linear in each variable; that is, when the function $u \mapsto f(u, v)$ is linear for each $v \in V$ and the function $v \mapsto f(u, v)$ is linear for each $u \in U$.
+
+>[!definition] Tensor Products
+>The *tensor product of vector spaces* $U$ and $V$ is a vector space $U \otimes V$ together with the bilinear function $f: U \times V \to U \otimes V$ such that for every bilinear function $g: U \times V \to W$ there exists a unique linear function $h: U \otimes V \to W$ such that $g = h \circ f$. This is characterized by the following diagram:
+>
+>![[Pasted image 20250512165554.png|center|500]]
+>
+>Note that $U \times V$ is not a vector space, so it doesn't make sense to ask if $f$ or $g$ are linear. The function $f$ usually stays anonymous and is written as $f: (a, b) \mapsto a \otimes b$. It follows that arbitrary elements of $U \otimes V$ take the form $\sum_{i=1}^n s_ia_i \otimes b_i$ for $s_i \in \mathbb{C}$, $a_i \in U$ and $b_i \in V$. The tensor product also extends to linear maps. If $f_1: U_1 \to V_1$ and $f_2: U_2 \to V_2$ are linear maps, then there exists a unique linear map $f_1 \otimes f_2: U_1 \otimes V_1 \to U_2 \otimes V_2$ that satisfies  $(f_1 \otimes f_2)(a_1 \otimes a_2) = f_1(a_1) \otimes f_2(a_2)$ for $a_1 \in U_1$ and $a_2 \in U_2$. In this way, the tensor product becomes a functor $\otimes : \textbf{Vect} \times \textbf{Vect} \to \textbf{Vect}$.
+>^tensor-product-functor-definition
+
+>[!definition] Tensor Products of Hilbert Spaces
+>The *tensor product of Hilbert spaces* $H$ and $K$ is the Hilbert space $H \otimes K$ built by taking the tensor product of the underlying vector spaces, and taking the inner product to be $\langle a_1 \otimes b_1 \vert a_2 \otimes b_2 \rangle = \langle a_1 \vert a_2 \rangle_H \cdot \langle b_1 \vert b_2 \rangle_K$, then completing it. If $H \xrightarrow{f} H'$ and $K \xrightarrow{g} K'$ are bounded linear maps, then so is the continuous extension of the tensor product of linear maps to a function that we again call $f \otimes g: H \otimes K \to H' \otimes K'$. This again gives a functor $\otimes : \textbf{Hilb} \times \textbf{Hilb} \to \textbf{Hilb}$.
+>
+>If $\{e_i\}$ is an orthonormal basis for the Hilbert space $H$, and $\{f_j\}$ an orthonormal basis for $K$, then $\{e_i \otimes f_j\}$ is an orthonormal basis for $H \otimes K$. So when $H$ and $K$ are finite-dimensional, there is no difference between their tensor products as vector spaces and as Hilbert spaces.
+>^tensor-product-hilb-definition
+
+
+ 
+
 

@@ -11,14 +11,10 @@
             "id": "32a25b914a1a5c40",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Categories for Quantum Theory/Basics.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Basics"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -142,13 +138,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Categories for Quantum Theory/Basics.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Basics"
+              "title": "Outline"
             }
           },
           {
@@ -162,7 +157,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -180,30 +175,33 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "32a25b914a1a5c40",
+  "active": "2942a7406ab32cb6",
   "lastOpenFiles": [
+    "Categories for Quantum Theory/Monoidal Categories.md",
+    "Images/Pasted image 20250513112528.png",
+    "Pasted image 20250513112459.png",
+    "I Fundamental Concepts/Introduction to Quantum Mechanics/Linear Algebra.md",
+    "I Fundamental Concepts/Introduction to Computer Science/Models for Computation.md",
+    "Images/Pasted image 20250512204301.png",
+    "I Fundamental Concepts/Introduction to Quantum Mechanics/Density Operators.md",
+    "I Fundamental Concepts/Introduction to Computer Science",
+    "I Fundamental Concepts/Introduction to Quantum Mechanics/The Postulates of Quantum Mechanics.md",
+    "I Fundamental Concepts/Introduction to Quantum Mechanics/Superdense Coding.md",
+    "Categories for Quantum Theory/Basics.md",
+    "Images/Pasted image 20250512165554.png",
+    "II Quantum Computation/Quantum Circuits/Operating on a Single Qubit.md",
+    "II Quantum Computation/Quantum Circuits/Quantum Algorithms.md",
+    "ZX Calculus/The ZX Calculus.md",
     "README.mdlw3Fjw.bck",
     "README.mdjrfiNz.bck",
     "README.md",
-    "I Fundamental Concepts/Introduction to Quantum Mechanics/Linear Algebra.md",
-    "Categories for Quantum Theory/Basics.md",
-    "I Fundamental Concepts/Introduction to Quantum Mechanics/Superdense Coding.md",
-    "I Fundamental Concepts/Introduction to Quantum Mechanics/The Postulates of Quantum Mechanics.md",
     "Images/Pasted image 20250511181135.png",
     "Images/Pasted image 20250510225115.png",
     "Images/Pasted image 20250511165025.png",
     "Images/Pasted image 20250511164438.png",
     "Images/Pasted image 20250511164329.png",
     "Images/Pasted image 20250511164008.png",
-    "Images/Pasted image 20250511162041.png",
-    "Images/Pasted image 20250510230102.png",
-    "Images/Pasted image 20250510230153.png",
-    "Images/Pasted image 20250424141518.png",
-    "ZX Calculus/The ZX Calculus.md",
     "Nomenclature and Notation/Nomenclature and Notation.md",
-    "II Quantum Computation/Quantum Circuits/Quantum Algorithms.md",
-    "II Quantum Computation/Quantum Circuits/Operating on a Single Qubit.md",
-    "I Fundamental Concepts/Introduction to Quantum Mechanics/Density Operators.md",
     "Images",
     "Beginning.md",
     "Categories for Quantum Theory",
@@ -213,8 +211,6 @@
     "II Quantum Computation/Quantum Circuits",
     "I Fundamental Concepts",
     "II Quantum Computation",
-    "I Fundamental Concepts/Introduction to Quantum Mechanics",
-    "Welcome.md",
-    "Nomenclature and Notation"
+    "Welcome.md"
   ]
 }

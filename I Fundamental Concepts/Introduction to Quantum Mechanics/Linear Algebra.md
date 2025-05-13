@@ -390,7 +390,7 @@ $$
 >
 >A unitary matrix is a complex square matrix where the inverse is equal to its Hermitian transpose, or $$U^{-1}=U^\dagger$$
 
-An important class of Hermitian Operators are the Projectors. Suppose $V$ is a $d$ dimensional vector space, and $W$ is a $k$ dimensional vector subspace of $V$. Using the Gram-Schmidt procedure produces an orthonormal basis $\ket{1},\ldots,\ket{d}$ for $v$ such that $\ket{1},\ldots,\ket{k}$ is an orthonormal basis for $W$. We define the projectors to be $$P \equiv\sum_{i=1}^k\ket{i}\bra{i}$$ This definition is independent of the orthonormal basis used for $W$. 
+An important class of Hermitian Operators are the Projectors. Suppose $V$ is a $d$ dimensional vector space, and $W$ is a $k$ dimensional vector subspace of $V$. Using the Gram-Schmidt procedure produces an orthonormal basis $\ket{1},\ldots,\ket{d}$ for $v$ such that $\ket{1},\ldots,\ket{k}$ is an orthonormal basis for $W$. We define the projectors to be $$P \equiv\sum_{i=1}^k\ket{i}\bra{i}$$ This definition is independent of the orthonormal basis used for $W$.  ^2a48c0
 
 >[!proof] For all vectors $\ket{v}$, $\ket{v}\bra{v}$ is Hermitian
 >Consider another arbitrary vector $\ket{w}$. Because $(\ket{v}\bra{w})^\dagger = (\ket{w}\bra{v})$ then $$(\ket{v}\bra{v})^\dagger = (\ket{v}\bra{v})$$

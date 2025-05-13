@@ -81,3 +81,15 @@ A natural question to ask in light of this is exactly when, or what class of ens
 > To arrive at the situation we introduce notations! $\ket{\tilde{\psi_i}}$ are vectors that may not be normalized to unit length. We say the set $\ket{\tilde{\psi_i}}$ *generates* the operator $\rho \equiv \sum_i \ket{\tilde{\psi_i}} \bra{\tilde{\psi_i}}$ and thus the connection to regular familiar density operators is given by the relation $\ket{\tilde{\psi_i}} = \sqrt{p_i}\ket{\psi_i}$
 
 When do two sets of vectors, $\ket{\tilde{\psi_i}}$ and $\ket{\tilde{\varphi_j}}$ generate the same operator $\rho$ ?
+
+>[!theorem]
+>The sets $\ket{\tilde{\psi_i}}$ and $\ket{\tilde{\varphi_j}}$ generate the same density operator if and only if $$\ket{\tilde{\psi_i}} = \sum_j u_{ij}\ket{\tilde{\varphi_j}}$$ where $u_{ij}$ is a unitary matrix of complex numbers, with indices $i$ and $j$, we 'pad' whichever set of vectors  $\ket{\tilde{\psi_i}}$ or $\ket{\tilde{\varphi_j}}$ is smaller with additional vectors $0$ so that the two sets have the same amount of elements. 
+>
+>As a consequence of the theorem, note that $\rho = \sum_i p_i \ket{\psi_i}\bra{\psi_i} = \sum_j q_j \ket{\varphi_j}\bra{\varphi_j}$ for *normalized* states $\ket{\psi_i}$, $\ket{\varphi_j}$ and probability distributions $p_i$ and $q_j$ if and only if $$\sqrt{p_i} \ket{\psi_i} = \sum_j u_{ij}\sqrt{q_j}\ket{\varphi_j},$$
+>again for some unitary matrix $u_{ij}$, and we may pad the smaller ensemble with entries having probability zero in order to make them the same size. 
+>^unitary-freedom-density-theorem
+
+>[!proof]
+
+
+
