@@ -114,6 +114,7 @@ While $\textbf{Set}$ is a setting for classical physics, and $\textbf{Hilb}$ a s
 
 It helps to draw diagrams of morphisms.
 ![[Pasted image 20250424141518.png | center]]
+
 We say a diagram commutes when ever possible path from one object to another is the same. In this case, that means $g = j \circ i$ and $i \circ f = k \circ h$. It then follows that $g \circ f = j \circ k \circ h$
 
 >[!definition] Domain, Codomain, Endomorphism, Operator
@@ -446,7 +447,6 @@ We also give more rigorous definitions for the [[Linear Algebra#Tensor Products|
 >If $\{e_i\}$ is an orthonormal basis for the Hilbert space $H$, and $\{f_j\}$ an orthonormal basis for $K$, then $\{e_i \otimes f_j\}$ is an orthonormal basis for $H \otimes K$. So when $H$ and $K$ are finite-dimensional, there is no difference between their tensor products as vector spaces and as Hilbert spaces.
 >^tensor-product-hilb-definition
 
+## Quantum Information
 
- 
-
-
+Yeah this is a chapter in the book but this is covered in [[The Postulates of Quantum Mechanics]] and [[Density Operators]] sooooooooooooooooo

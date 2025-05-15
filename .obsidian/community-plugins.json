@@ -2,5 +2,6 @@
   "obsidian-tikzjax",
   "mathlinks",
   "callout-manager",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-pandoc"
 ]

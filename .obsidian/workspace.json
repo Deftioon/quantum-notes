@@ -11,10 +11,14 @@
             "id": "32a25b914a1a5c40",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Categories for Quantum Theory/Basics.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Basics"
             }
           }
         ]
@@ -138,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Categories for Quantum Theory/Basics.md",
                 "followCursor": false,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Basics"
             }
           },
           {
@@ -172,12 +177,29 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "callout-manager:Insert Callout": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "markdown-importer:Open format converter": false,
+      "publish:Publish changes...": false
     }
   },
-  "active": "2942a7406ab32cb6",
+  "active": "32a25b914a1a5c40",
   "lastOpenFiles": [
     "Categories for Quantum Theory/Monoidal Categories.md",
+    "Categories for Quantum Theory/Basics.md",
+    "Images/Pasted image 20250513192524.png",
+    "Images/Pasted image 20250513190646.png",
+    "Images/Pasted image 20250513190511.png",
+    "Images/Pasted image 20250513190121.png",
+    "Images/Pasted image 20250513185509.png",
+    "I Fundamental Concepts/Introduction to Quantum Mechanics/The Postulates of Quantum Mechanics.md",
+    "Exports/Monoidal Categories.pdf",
+    "Exports",
+    "Categories for Quantum Theory/Monoidal Categories.html",
+    "Images/Pasted image 20250513154315.png",
+    "Nomenclature and Notation/Nomenclature and Notation.md",
+    "II Quantum Computation/Quantum Circuits/Operating on a Single Qubit.md",
+    "II Quantum Computation/Quantum Circuits/Quantum Algorithms.md",
+    "Images/Pasted image 20250513150754.png",
     "Images/Pasted image 20250513112528.png",
     "Pasted image 20250513112459.png",
     "I Fundamental Concepts/Introduction to Quantum Mechanics/Linear Algebra.md",
@@ -185,32 +207,17 @@
     "Images/Pasted image 20250512204301.png",
     "I Fundamental Concepts/Introduction to Quantum Mechanics/Density Operators.md",
     "I Fundamental Concepts/Introduction to Computer Science",
-    "I Fundamental Concepts/Introduction to Quantum Mechanics/The Postulates of Quantum Mechanics.md",
     "I Fundamental Concepts/Introduction to Quantum Mechanics/Superdense Coding.md",
-    "Categories for Quantum Theory/Basics.md",
-    "Images/Pasted image 20250512165554.png",
-    "II Quantum Computation/Quantum Circuits/Operating on a Single Qubit.md",
-    "II Quantum Computation/Quantum Circuits/Quantum Algorithms.md",
     "ZX Calculus/The ZX Calculus.md",
     "README.mdlw3Fjw.bck",
     "README.mdjrfiNz.bck",
     "README.md",
-    "Images/Pasted image 20250511181135.png",
-    "Images/Pasted image 20250510225115.png",
-    "Images/Pasted image 20250511165025.png",
-    "Images/Pasted image 20250511164438.png",
-    "Images/Pasted image 20250511164329.png",
-    "Images/Pasted image 20250511164008.png",
-    "Nomenclature and Notation/Nomenclature and Notation.md",
     "Images",
     "Beginning.md",
     "Categories for Quantum Theory",
     "ZX Calculus",
     "II Quantum Computation/Untitled.md",
     "II Quantum Computation/Untited 1",
-    "II Quantum Computation/Quantum Circuits",
-    "I Fundamental Concepts",
-    "II Quantum Computation",
     "Welcome.md"
   ]
 }

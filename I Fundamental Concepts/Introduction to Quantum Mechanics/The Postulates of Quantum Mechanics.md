@@ -238,6 +238,7 @@ There is another kind of phase known as the *relative phase*. We say that two am
 
 >[!note] Postulate 4
 >FINALLY another postulate after so much about measurements. The state space of a composite physical system is the tensor product of the state spaces of the component physical systems. Moreover, if we have systems numbered $1$ through $n$, and the system number $i$ is prepared in the state $\ket{\psi_i}$, then the joint state of the system is $\ket{\psi_1} \otimes \ket{\psi_2} \otimes \cdots \otimes \ket{\psi_n}$.
+>^postulate-4
 
 Projective measurements together with unitary dynamics are sufficient to implement a general measurement. The proof of this makes use of composite systems, and shows postulate 4 in action. 
 
