@@ -1,4 +1,4 @@
-# Linear  Algebra and Quantum Mechanics
+## Linear  Algebra and Quantum Mechanics
 
 >[!important]
 >All vector spaces are assumed to be finite dimensional, unless otherwise noted. In many instances, this restriction is unnecessary, or can be removed with some additional technical work.
@@ -54,7 +54,7 @@
 >$$
 >^pauli-matrices-definition
 
-# Information Theory and Probability
+## Information Theory and Probability
 
 >[!warning]
 >Logarithms are *always* taken to base 2, unless otherwise noted. $\log$ is used to denote base 2 logarithms and $\ln$ when the natural base $e$ logarithm is needed.
@@ -67,7 +67,7 @@
 >The *relative entropy* of a [[Nomenclature and Notation#^positive-operator-definition|positive operator]] $A$ with respect to a [[Nomenclature and Notation#^positive-operator-definition|positive operator]] $B$ is defined  by $S(A \vert \vert B) \equiv \operatorname{tr}(A \log A) - \operatorname{tr}(A \log B)$
 >^relative-entropy-definition
 
-# Miscellanea
+## Miscellanea
 >[!definition]
 >$\oplus$ denotes modulo two addition.
 

@@ -419,6 +419,8 @@ We take the idea of [[Linear Algebra#Adjoint and Hermitian Operators|adjoint lin
 >[!definition]
 >A bounded linear map $H \xrightarrow{f} K$ between Hilbert spaces is an *isometry* when $f^\dagger \circ f = \text{id}_H$ and a *partial isometry* when $f^\dagger \circ f$ is a [[Linear Algebra#^2a48c0|projector]].
 
+^7a8d4c
+
 Recall the idea of *kets* and *bras* in Dirac Notation. The correspondence between these two, that $\ket{v} = \bra{v}^\dagger$, leads to the notion of a dual space.
 
 >[!definition] Dual Space

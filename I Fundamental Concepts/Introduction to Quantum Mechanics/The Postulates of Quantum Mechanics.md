@@ -254,6 +254,6 @@ $$
 $$
 It follows that $U$ can be extended to a unitary operator on the space $Q \otimes M$, which we also denote by $U$.  Suppose we perform a projective measurement on the two systems described by the measurement operators $P_m = I_Q \otimes \ket{m}\bra{m}$. The probability and the post-measurement joint state all match up with those defined in [[The Postulates of Quantum Mechanics#^postulate-3|Postulate 3]]. Hence, with unitary dynamics, projective measurements, and ancilla systems, we can perform any measurement as defined in Postulate 3.
 
-Postulate 4 also lets us define an enthralling concept in quantum mechanics, entanglement. Consider the two qubit state $$\ket{\psi}=\frac{\ket{00}+\ket{11}}{\sqrt{2}}$$ This state has the property that there are no single qubit states such that $\ket{\psi}=\ket{a}\ket{b}$. 
+Postulate 4 also lets us define an enthralling concept in quantum mechanics, entanglement. Consider the two qubit state $$\ket{\psi}=\frac{\ket{00}+\ket{11}}{\sqrt{2}}$$ This state has the property that there are no single qubit states such that $\ket{\psi}=\ket{a}\ket{b}$.  ^469e2c
 
 We can apply this property in [[Superdense Coding]].

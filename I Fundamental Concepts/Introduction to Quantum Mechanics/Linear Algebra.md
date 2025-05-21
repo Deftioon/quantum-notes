@@ -156,7 +156,8 @@ Once the action of a linear operator of a linear operator $A$ on a basis of $V$ 
 >(BA)\ket{v_i}&=B(\sum_jA_{ji}\ket{w_j}) \\
 >&=\sum_jA_{ji}B\ket{w_j} \\
 >&=\sum_jA_{ji}\sum_kB_{kj}\ket{x_k} \\
->&=\sum_{j, k}B_{kj}A_{ji}\ket{x_k}
+>&=\sum_{j, k}B_{kj}A_{ji}\ket{x_k} \\
+>(BA)\ket{v_i}&=\sum_{k} (BA)_{ki} \ket{x_k}
 >\end{aligned}
 >$$
 >Which is the matrix multiplication.
@@ -561,7 +562,7 @@ This brings about a rather elegant outer product representation of any unitary $
 >[!proof] Eigenvalues of a Projector $P$ are all either 0 or 1.
 >We consider a projector $P$ ($P^2 = P$) and an eigenvector  $\ket{v}$ with eigenvalue $\lambda$, so $P\ket{v} = \lambda \ket{v}$. Applying $P$ again gives $P^2 \ket{v} = \lambda^2 \ket{v}$. Hence, $\lambda^2 \ket{v} = \lambda \ket{v} \Longrightarrow \lambda (\lambda - 1) = 0$, so either $\lambda = 0$ or $\lambda = 1$
 
-	A special subclass of Hermitian operators is extremely important. These are the *positive operators*.
+A special subclass of Hermitian operators is extremely important. These are the *positive operators*.
 
 >[!definition] Positive Operators
 >A positive operator $A$ is defined to be an operator such that for any vector $\ket{v}$, $(\ket{v}, A\ket{v})$ is a real, non-negative number.
@@ -832,7 +833,7 @@ It turns out that many important properties of pairs of operators can be deduced
 >\begin{aligned}
 >BA &= \left(\sum_j b_j \ket{j} \bra{j} \right) \left(\sum_i a_i \ket{i}\bra{i}  \right) \\
 >&= \sum_j \sum_i b_j a_i \ket{j} \underbrace{\langle j \vert i \rangle}_{\delta_{ij}} \bra{i} \\
->&= \sum_i a_i b_j \ket{i} \bra{i}
+>&= \sum_i a_i b_i \ket{i} \bra{i}
 >\end{aligned}
 >$$
 >Hence, $AB = BA$ and $[A, B] = 0$.

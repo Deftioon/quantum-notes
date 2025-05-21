@@ -3,5 +3,6 @@
   "mathlinks",
   "callout-manager",
   "obsidian-git",
-  "obsidian-pandoc"
+  "obsidian-pandoc",
+  "obsidian-discordrpc"
 ]

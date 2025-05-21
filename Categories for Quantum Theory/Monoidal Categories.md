@@ -159,5 +159,194 @@ The correctness theorem is saying two things: That the graphical calculus is *so
 
 ### States and Effects
 
-If a mathematical structure lives as an object inside a category, and we want to learn something about its structure, we must find a way to do it using the morphisms of the category only. 
+If a mathematical structure lives as an object inside a category, and we want to learn something about its structure, we must find a way to do it using the morphisms of the category only. For example, consider a set $A \in \text{Ob}(\textbf{Set})$ with a chosen element $a \in A$. We can represent this with the function $\{\cdot \} \to A$ defined by $\cdot \mapsto A$. This inspires the following definition, which generalizes the notion of a set-theoretical state.
+
+>[!definition] State
+>In a monoidal category, a *state* of an object $A$ is a morphism $I \to A$ where $I$ is the [[Monoidal Categories#^monoidal-category-definition|unit object]] of the monoidal category.
+>
+>Since the unit object represents the trivial or empty system, a state $I \to A$ of a system can be thought of the system being brought into being.
+>^state-definition
+
+>[!example] States in our example categories.
+>- In $\textbf{Hilb}$, states of a Hilbert space $H$ are the linear functions $\mathbb{C} \to H$, which correspond to elements of $H$ by considering the image of $1 \in \mathbb{C}$. For example, the map $1 \to \psi$ defines the state $\psi$.
+>- In $\textbf{Set}$, states of a set $A$ are the functions $\{\cdot \} \to A$, which correspond to elements of $A$ by considering the image of $\cdot$. 
+>- In $\textbf{Rel}$, states of a set $A$ are the relations $\{\cdot \} \xrightarrow{R} A$, which correspond to elements of $A$ by considering all elements related to $\cdot$.
+>^state-example
+
+>[!definition] Well-Pointed Categories
+>A monoidal category is *well-pointed* if for all parallel pairs of morphisms $A \xrightarrow{f, g} B$, we have $f = g$ when $f \circ a = g \circ a$ for all states $I \xrightarrow{a} A$. In other words, they act identically on all states. 
+>
+>A monoidal category is *monoidally well-pointed* if for all parallel pairs of morphisms $A_1 \otimes \cdots \otimes A_n \xrightarrow{f, g} B$, we have $f = g$ when $f \circ (a_1 \otimes \ldots \otimes a_n) = g \circ (a_1 \otimes \ldots \otimes a_n)$ for all states $I \xrightarrow{a_1} A_1, \ldots, I \xrightarrow{a_n} A_n$. In other words, they act identically on all tensor product states. For example, for parallel systems composed with the tensor product $\otimes$, it's sufficient to check equality of $f$ and $g$ on *separable states* (the combination of states of the individual components), instead of all entangled states.
+>^well-pointed-categories
+
+The idea is that in a well-pointed category, we can determine whether or not morphisms are equal by only looking at how they affect the states of their domains. In a monoidally well-pointed category, we only have to consider the product states to tell whether or not morphisms are equal out of a compound object. The categories $\textbf{Set}$, $\textbf{Rel}$, $\textbf{Vect}$ and $\textbf{Hilb}$ are all monoidally well-pointed. For the last two categories, it can be observed because if $\{d_i\}$ is a basis for $H$ and $\{e_j\}$ is a basis for $K$, then $\{d_i \otimes e_j\}$ is a basis for $H \otimes K$.
+
+In the graphical calculus, to emphasize that states $I \xrightarrow{a} A$ have the empty picture as their domain, states are drawn as triangles:
+![[Pasted image 20250516152859.png|center|75]]
+
+### Product States and Entangled States
+
+>[!definition] Joint States, Product States, Entangled States
+>For objects $A$ and $B$ in a monoidal category, a morphism $I \xrightarrow{c} A \otimes B$ is a *joint state* of $A$ and $B$, depicted graphically as:
+>
+>![[Pasted image 20250516153122.png|center|150]]
+>
+>A joint state is a *product state* when it is of the form $I \xrightarrow{\lambda_I^{-1}} I \otimes I \xrightarrow{a \otimes b} A \otimes B$ for $I \xrightarrow{a} A$ and $I \xrightarrow{b} B$:
+>
+>![[Pasted image 20250516153355.png|center|300]]
+>
+>A joint state is *entangled* when it is not a product state. These represent preparations of  $A \otimes B$ that cannot be decomposed as a preparation of $A$ alongside a preparation of $B$. In this case, there is some special connection between $A$ and $B$, which means they cannot have been prepared independently.
+>
+>In $\textbf{Hilb}$, joint states of $H$ and $K$ are the elements of $H \otimes K$. Product states are factorizable states, and entangled states are elements of $H \otimes K$ which are not factorizable. For example, the [[The Postulates of Quantum Mechanics#^469e2c|maximally entangled bell states]]. 
+>^joint-product-entangled-state-definition
+
+In our other examples:
+- In $\textbf{Set}$, joint states of $A$ and $B$ are the elements of $A \times B$. Product states are the elements of $A \times B$, and entangled states *do not exist*.
+- In $\textbf{Rel}$, joint states of $A$ and $B$ are the subsets of $A \times B$. Product states are the "square subsets" $U \subseteq A \times B$, where for some $V \subseteq A$ and $W \subseteq B$, $(a, b) \in U$ if and only if $a \in V$ and $b \in W$.  Entangled states are the subsets of $A \times B$ that are not of this form.
+
+This hints at why entanglement occurs only in quantum mechanics. It cannot occur classically in the deterministic processes encoded in $\textbf{Set}$, it can only occur if we allow nondeterministic behaviour such as in $\textbf{Rel}$. 
+
+### Effects
+
+An  *effect* represents a process by which a system is destroyed or consumed.
+
+>[!definition] Effect
+>In a monoidal category, an *effect* or *costate* is the morphism $A \to I$, shown diagrammatically below:
+>
+>![[Pasted image 20250516163144.png|center|300]]
+>
+>We can interpret this as a history of events that has taken place. If the diagram has an effect, then it is interpreted to have undergone a measurement, with the given effect as a result. 
+>
+>In the above diagram, the state $a$ was prepared, then a process $f$ is performed producing two systems, the first of which is measured giving outcome $x$. This does not imply that $x$ is the *only* outcome of the measurement, but that we are only interested in the cases where outcome $x$ does occur. An effect can be thought of as a *postselection*, keep repeating the same experiment until a measurement has a specified outcome. 
+>
+>The overall history is a morphism $I \to A$, which is a state of $A$. The postselection interpretation dictates how to prepare this state, given the ability to perform its components.
+>^effect-definition
+>
+
+>[!example] 
+>To say more than general statements, we must look into our example categories:
+>- In quantum theory, as described by $\textbf{Hilb}$, the morphisms $a$, $f$, and $x$ must be [[Basics#^7a8d4c|partial isometries]]. The [[The Postulates of Quantum Mechanics#^postulate-3|Born rule of quantum mechanics]] dictate that the probability for this history to take place is given by the square norm of its resulting state. So, in particular, the history described by this composite morphism is impossible exactly when the overall state is zero.
+>- In non-deterministic classical physics, as described by $\textbf{Rel}$, there are no particular requirements on the morphisms $a$, $f$, and $x$, which may be arbitrary relations of the correct types. The overall composite relation then describes the amount of ways in which $A$ can be prepared as a result of its history. If the overall composite is empty, then this particular sequence of a state preparation, a dynamic step, and a measurement result cannot occur.
+>- In deterministic classical physics, as described by $\textbf{Set}$, The [[Monoidal Categories#^monoidal-category-definition|monoidal unit object]] is [[Basics#^terminal-initial-definition|terminal]] in that category, meaning $\textbf{Set}(A, I)$ has only one single element for any object $A$. So, every object has a *unique* effect, and there is no non-trivial notion of "measurement".
+>^effect-example
+
+We may think of the wires in the graphical calculus to carry some sort of information flow. If the monoidal dagger category is [[Monoidal Categories#^well-pointed-categories|monoidally well-pointed]], two morphisms $A \xrightarrow{f, g} C$ are equal if and only if for all states $I \xrightarrow{a} A$ and $I \xrightarrow{c} C$ the two following scalars are equal:
+
+![[Pasted image 20250519101018.png|center|300]]
+
+So we could verify an equation by computing the "matrix entries" on both sides. In $\textbf{Rel}$ it is convenient to do this by decorating the wires with elements. For example, the morphism $I \to I$ given by:
+
+![[Pasted image 20250519101420.png|center|300]]
+
+Is non-empty if and only if there exists an element $b$ such that the following are also non-empty:
+
+![[Pasted image 20250519110212.png|center|500]]
+
+This allows us to draw the following diagram,
+
+![[Pasted image 20250519110331.png|center|300]]
+
+To show that if element $a$ is connected to $c$ by the composite morphism, then it must 'flow' through some element $b$ in the middle. 
+
+However, in $\textbf{FHilb}$, this technique does not work because of interference.
+
+
+## Braiding and Symmetry
+
+In many processes, if $A$ and $B$ are systems, then $A \otimes B$ and $B \otimes A$ are considered to be essentially equivalent. However, they may not necessarily be equal. This leads us to introduce the notion of a braiding [[Basics#^natural-transformation-definition|natural isomorphism]] $$A \otimes B \xrightarrow{\sigma_{A, B}} B \otimes A.$$
+This [[Basics#^natural-transformation-definition|natural isomorphism]] essentially just swaps the order of the tensor product, and hence the order of the systems. This notion extends to braided and symmetrical monoidal categories.
+
+### Braided Monoidal Categories
+
+>[!definition] Braided Monoidal Categories
+>A *braded monoidal category* is a monoidal category equipped with a [[Basics#^natural-transformation-definition|natural isomorphism]] $$A \otimes B \xrightarrow{\sigma_{A, B}} B \otimes A,$$ that satisfies the following *hexagon equations*:
+>
+>![[Pasted image 20250519141919.png|center|500]]
+>
+>^braided-monoidal-category-definition
+
+We include braiding in the graphical notation as such:
+
+![[Pasted image 20250519142103.png|center|500]]
+
+And the invertibility of the [[Basics#^natural-transformation-definition|natural isomorphism]] takes form:
+
+![[Pasted image 20250519142133.png|center|500]]
+
+This is very similar to the intuitive behavior of strings. The naturality of braiding and inverse braiding have the following representations:
+
+![[Pasted image 20250520091537.png|center|500]]
+
+And the hexagon equations are as follows:
+
+![[Pasted image 20250520091600.png|center|500]]
+
+Since the strands of a braiding cross over each other, we say that braided monoidal categories now have a notion of a third dimension. So while categories are linear, or one dimensional, and monoidal categories are planar, two dimensional, with planar isotopy, braided monoidal categories are spatial, three dimensional, with spatial isotopy. 
+
+>[!theorem] Correctness of graphical calculus for braided monoidal categories
+>A well-typed equation between morphisms in a braided monoidal category follows from the axioms if and only if it holds in the graphical language up to spatial isotopy.
+>^braided-correctness
+
+![[Pasted image 20250520092007.png|center|500]]
+
+For example, these diagrams are clearly spatially isotopic. However, to prove from the axioms, we do the following:
+
+![[Pasted image 20250520093808.png|center|500]]
+
+![[Pasted image 20250520154335.png|center|500]]
+
+We can also prove this result, known as the *Yang-Baxter equation*, which has an important role in the theory of knots, in the language of braided monoidal categories:
+
+![[Pasted image 20250521094602.png|center|500]]
+
+Where, in order, we use the hexagon equation, naturality, then the hexagon again.
+
+For example in our example sets, there is a notion of swapping:
+
+>[!definition]
+>The monoidal categories $\textbf{Hilb}$, $\textbf{Set}$ and $\textbf{Rel}$ can be equipped with a canonical braiding:
+>- In $\textbf{Hilb}$, $H \otimes K \xrightarrow{\sigma_{H, K}} K \otimes H$ is the unique linear map extending $a \otimes b \mapsto b \otimes a$ for all $a \in H$ and $b \in K$.
+>- In $\textbf{Set}$, $A \times B \xrightarrow{\sigma_{A, B}} B \times A$ is defined by $(a, b) \mapsto (b, a)$ for all $a \in A$ and $b \in B$.
+>- In $\textbf{Rel}$, $A \times B \xrightarrow{\sigma_{A, B}} B \times A$ is defined by $(a, b) \sim (b, a)$ for all $a \in A$ and $b \in B$.
+
+Each of these categories has a stronger structure of *symmetric monoidal*.
+
+### Symmetric Monoidal Categories
+
+>[!definition] Symmetric Monoidal Categories
+>A braided monoidal category is *symmetric* when $$\sigma_{B, A} \circ \sigma_{A, B} = \operatorname{id}_{A \otimes B}$$ for all objects $A$ and $B$, in which case we call $\sigma$ the *symmetry*.
+>^symmetric-monoidal-categories-definition
+
+Graphically, this condition has the following representation:
+
+![[Pasted image 20250521095513.png|center|300]]
+
+As such, the strings can intuitively pass through each other, and non-trivial knots cannot be formed.
+
+In a *symmetric monoidal category*, $\sigma_{A, B} = \sigma_{B, A}^{-1}$:
+
+![[Pasted image 20250521095616.png|center|300]]
+
+Hence, a symmetric monoidal category does not distinguish between crossing over or crossing under, as strings can pass through each other. So we can draw:
+
+![[Pasted image 20250521095846.png|center|150]]
+
+>[!theorem] Correctness of graphical calculus for symmetric monoidal categories
+>A well-typed equation between morphisms in a symmetric monoidal category follows from the axioms if and only if it holds in the graphical language up to graphical equivalence.
+>^symmetric-monoidal-correctness
+
+By 'graphical equivalence', we mean [[Monoidal Categories#^braided-correctness|spatial isotopy]] along with the previous properties of a symmetric monoidal category.
+
+The notion of symmetric monoidal categories sees use in math and physics.
+
+>[!definition] $\textbf{Rep(G)}$
+>For a finite [[Basics#^groupoid-definition|group]] $\textbf{G}$, there is a symmetric monoidal category $\textbf{Rep(G)}$ of finite dimensional [[Basics#^group-representation-example|representations]] of $\textbf{G}$, in which:;
+>- **Objects** are the finite-dimensional [[Basics#^group-representation-example|representations]] of $\textbf{G}$.
+>- **Morphisms** are the [[Basics#^group-representation-example|intertwiners]] for the group action.
+>- The **tensor product** is the [[Basics#^tensor-product-hilb-definition|tensor product]] of [[Basics#^group-representation-example|representations]].
+>- The **unit object** is the trivial action of $\textbf{G}$ on the one-dimensional [[Basics#^vector-space-category-definition|vector space]].
+>- The **symmetry** is inherited from [[Basics#^vector-space-category-definition|$\textbf{Vect}$]].
+>^rep-g-definition
+
+Another interesting symmetric monoidal category is inspired by the physics of bosons and fermions. These are quantum particles with the property that when two fermions exchange places, a phase of $-1$ is obtained. However, when two bosons, or one boson and one fermion exchange places, there is no extra phase. This has a categorical structure, described as follows:
 
